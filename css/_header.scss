@@ -1,0 +1,115 @@
+header {
+    @media (min-width: 922px) {
+        left: 0 !important;
+        .toggle-menu {
+            display: none !important;
+        }
+    }
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1111;
+    padding: 20px 30px;
+    width: 300px;
+    background-color: $side-bg;
+    left: -300px;
+    transition: left .4s;
+    .profile {
+        img {
+            display: block;
+            width: 120px;
+            height: 120px;
+            border: 10px solid $icon-bg;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+        .name {
+            font-size: 30px;
+            color: $white;
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .social-media {
+            gap: 7px;
+            margin-bottom: 30px;
+            a {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background-color: $icon-bg;
+                i {
+                    font-size: 16px;
+                    color: $white;
+                }
+                &:hover {
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+    nav {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            li {
+                a {
+                    gap: 8px;
+                    i {
+                        font-size: 18px;
+                        color: $link-c;
+                        transition: .3s;
+                    }
+                    span {
+                        font-size: 16px;
+                        text-transform: capitalize;
+                        font-weight: 500;
+                        color: $link-c;
+                        display: block;
+                        transition: .3s;
+                    }
+                    &.active, &:hover {
+                        i {
+                            color: $blue;
+                        }
+                        span {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .toggle-menu {
+        width: 35px;
+        height: 35px;
+        background-color: $blue;
+        border-radius: 50%;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        i {
+            color: $white;
+            transition: .3s;
+            &.hide {
+                display: none;
+            }
+            &.show {
+                display: block;
+            }
+        }
+        &.clicked {
+            i {
+                &.hide {
+                    display: block;
+                }
+                &.show {
+                    display: none;
+                }
+            }
+        }
+    }
+}
