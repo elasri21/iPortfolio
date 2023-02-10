@@ -543,6 +543,9 @@ header .toggle-menu.clicked i.show {
 .portfolio .container .images .image:hover .links {
   bottom: 0;
 }
+.portfolio .container .images .image.hide {
+  display: none;
+}
 
 .services .container .all-services {
   display: grid;

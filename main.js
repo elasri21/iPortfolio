@@ -54,3 +54,24 @@ window.addEventListener("scroll", function() {
         goUp.style.opacity = "1";
     }
 });
+
+// portfolio
+const categories = Array.from(document.querySelectorAll(".nails span"));
+const projects = Array.from(document.querySelectorAll(".portfolio .images .image"));
+categories.forEach(nail => {
+    nail.addEventListener("click", function() {
+        for(let i = 0; i < categories.length; i++) {
+            categories[i].classList.remove("active");
+        }
+        projects.forEach(p => {
+            if(this.id == p.dataset.id && this.id != "all") {
+                p.classList.remove("hide");
+            } else if (this.id == "all") {
+                p.classList.remove("hide");
+            } else {
+                p.classList.add("hide");
+            }
+        });
+        this.classList.add("active");
+    });
+});
